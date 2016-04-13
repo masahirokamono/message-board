@@ -1,5 +1,5 @@
 <h1>メッセージ一覧</h1>
-<%= @message.each do |message| %>
+<% @messages.each do |message| %>
 
   名前:
 <%= message.name %>
@@ -7,10 +7,8 @@
   内容:
 <%= message.body %>
 
-
   <br>
 <% end %>
-
 
 <%= form_for(@message) do |f| %>
 
@@ -25,4 +23,5 @@
 
   
 <%= f.submit %>
+
 <% end %>
