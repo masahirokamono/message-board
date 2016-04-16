@@ -1,3 +1,31 @@
+body {
+  background-color: #FDF5E6;
+  font-size: 14px;
+}
+
+nav ul li {
+  margin: 0 20px;
+  display: inline-block;
+}
+
+
+
+nav {
+  text-align: center;
+  background: #fff;
+}
+
+nav ul li a.selected {
+  color: #000;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #999;
+  font-weight: bold;
+}
+
+
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
