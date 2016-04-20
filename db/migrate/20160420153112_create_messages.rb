@@ -4,8 +4,7 @@ class CreateMessages < ActiveRecord::Migration
       t.string :name
       t.string :age
       t.string :body
-
-      t.timestamps null: false
-    end
+        t.timestamps null: false
+   end
   end
 end
