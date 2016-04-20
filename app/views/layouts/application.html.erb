@@ -11,32 +11,13 @@
     <nav class="navbar">
     <div class="container">
       <div class="navbar-header">
-<<<<<<< HEAD
-         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample">
-=======
+
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample">
->>>>>>> challenge1
  	    			<span class="sr-only">Toggle navigation</span>
  			     	<span class="icon-bar"></span>
  			    	<span class="icon-bar"></span>
 			    	<span class="icon-bar"></span>
-<<<<<<< HEAD
-			</button>
-          <a class="navbar-brand" href="#">Message Board</a>
-            		<div class="collapse navbar-collapse" id="navbarEexample">
-         		       	<ul class="nav navbar-nav">
-  			            	<li class="active"><a href="https://techacademy-kamokamo.c9users.io/#">トップページ</a></li>
-                      <li><a href="#">お知らせ</a></a></li>
-                      <li><a href="#">contact</a></li>  
-    				        <form class="navbar-form navbar-left" role="search">
-				            <div class="form-group">
-				        	  <input type="text" class="form-control" placeholder="検索キーワード">
-				            </div>
-			              <button type="submit" class="btn btn-default">検索</button>
-			              </ul>
-			              </form>
-                </div>
-=======
+
 		    </button>
             <h1><a class="navbar-brand" href="#">Message Board</a></h1>
             		<div class="collapse navbar-collapse" id="navbarEexample">
@@ -55,18 +36,17 @@
 			              
                 </div>
         </div>
->>>>>>> challenge1
     </div>
     </nav>
         <div class="container">
+          <% if notice %>
+            <div class="alert alert-info">
+                <%= notice %>
+            </div>
+                <% end %>
           <%= yield %>
         </div>
 <footer>
   <div class="copyright"> &copy; 2016 Masahiro Kamono</div>
 </footer>
 </body>
-
-<footer>
-  <div class="copyright"> &copy; 2016 Masahiro Kamono</div>
-</footer>
-</html>

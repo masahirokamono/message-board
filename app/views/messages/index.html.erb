@@ -2,54 +2,20 @@
   <div class="panel-heading">
     メッセージ一覧
   </div>
-    
   <div class="panel-body">
-    <% @messages.each do |message| %>
-      <span class="label label-info"><%= message.name %></span>
-      <%= message.body %>
+<% @messages.each do |message| %>
+      <span class="label label-info">
+<%= message.name %>
+</span>
+<%= message.body %>(
+<%= link_to "編集" , edit_message_path(message) %>
+<%= link_to "削除" , message , method: :delete, data: { confirm: '削除してもよろしいですか？' } %>
+        )
       <br>
-    <% end %>
+<% end %>
   </div>
 </div>
-<<<<<<< HEAD
 
-<%= form_for(@message) do |f| %>
-  <% if @message.errors.present? %>
-    <div class="alert alert-danger">
-      <%= alert %>
-      <ul>
-        <% @message.errors.full_messages.each do |full_message| %>
-          <li>
-            <%= full_message %>
-          </li>
-        <% end %> 
-      </ul>
-    </div>
-  <% end %>
+<% #部分テンプレートを読み込んでいる %>
 
-  名前:
-  <%= f.text_field :name %>
-
-  内容:
-  <%= f.text_field :body %>
-  <%= f.submit class: "btn btn-sm btn-primary" %>
-=======
-<%= form_for(@message, html: {class: "form-horizontal"}) do |f| %>
-  <div class="form-group">
-    <label for="message_name" class="control-label col-md-1">名前:</label>
-    <div class="col-md-4">
-      <%= f.text_field :name, :class => "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="message_body" class="control-label col-md-1">内容:</label>
-    <div class="col-md-4">
-      <%= f.text_area :body, :class => "form-control" %>
-    </div>
-  </div>
-  <div>
-        <%= f.submit class: "btn btn-sm btn-primary" %>
-  </div>
-  
->>>>>>> challenge1
-<% end %>
+<%= render 'form' %>
