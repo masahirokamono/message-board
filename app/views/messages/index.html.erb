@@ -3,14 +3,19 @@
     メッセージ一覧
   </div>
   <div class="panel-body">
+    
 <% @messages.each do |message| %>
       <span class="label label-info">
-<%= message.name %>
-</span>
-<%= message.body %>(
+        <%= message.name %>
+      </span>
+        <%= message.age %>
+        <%= message.body %>
+        
+      (
 <%= link_to "編集" , edit_message_path(message) %>
 <%= link_to "削除" , message , method: :delete, data: { confirm: '削除してもよろしいですか？' } %>
         )
+        
       <br>
 <% end %>
   </div>
