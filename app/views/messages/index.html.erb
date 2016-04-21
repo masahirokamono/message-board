@@ -3,13 +3,15 @@
     メッセージ一覧
   </div>
   <div class="panel-body">
+
     
 <% @messages.each do |message| %>
       <span class="label label-info">
         <%= message.name %>
       </span>
         <%= message.age %>
-        <%= message.body %>
+      
+  <%= message.body %>
         
       (
 <%= link_to "編集" , edit_message_path(message) %>
